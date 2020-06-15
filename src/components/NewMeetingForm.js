@@ -27,6 +27,7 @@ const NewMeetingForm = () => {
     const [disableSubmit, setDisableSubmit] = useState(false);
     const [errorAlerts, setErrorAlerts] = useState([]);
     const [warningAlerts, setWarningAlerts] = useState([]);
+    let resetHandler;
 
     const schema = yup.object().shape({
         invites: yup.array().required(),
@@ -39,7 +40,13 @@ const NewMeetingForm = () => {
         endTime: yup.string().required()
     });
 
-    const handleClose = () => setShowMeetingForm(false);
+    const handleClose = () => {
+        resetHandler();
+        setErrorAlerts([]);
+        setWarningAlerts([]);
+        setDisableSubmit(false);
+        setShowMeetingForm(false);
+    };
 
     const createFinalObject = (values) => {
         let meetingObj = {};
@@ -196,7 +203,8 @@ const NewMeetingForm = () => {
                     in
                     enableReinitialize={true}
                 >
-                    {({ handleSubmit, handleChange, handleBlur, values, touched, isValid, errors, resetForm }) => {
+                    {({ handleSubmit, handleChange, handleBlur, values, touched, isValid, errors, handleReset }) => {
+                        resetHandler = handleReset;
                         // console.log("Errors:", errors);
                         // console.log("Tocuhed:", touched);
                         // console.log("Values:", values);
