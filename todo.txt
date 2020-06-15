@@ -1,0 +1,14 @@
+Control theme - using Context API 
+Nav - using Context API
+App that displays list of users - Use Redux for this 
+You Can add users 
+Delete Users 
+Save user in cache
+Brouser history
+React Routes to display details page
+
+UserList
+UerForm
+Navbar
+UserDetails - List all the post by user
+About

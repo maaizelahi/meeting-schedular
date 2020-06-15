@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "Lato";
+    src: url("/assets/fonts/lato/lato-400");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("/assets/fonts/lato/lato-700");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("/assets/fonts/lato/lato-400italic");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("/assets/fonts/lato/llato-700italic");
+    font-weight: 700;
+    font-style: italic;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}

@@ -1,0 +1,76 @@
+/*Calendar*/
+
+.calendar {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.header .prev-next {
+    margin: 0 2em;
+}
+
+.header .month-heading {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.header .shedule-meeting-btn {
+}
+
+.header .calendar-user-form {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.header .calendar-user-select {
+    margin: 0.5em;
+}
+
+.days-row {
+    display: flex;
+    justify-content: space-around;
+    font-weight: 500;
+}
+
+.days-grid {
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.cell {
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.cell .event-badge {
+    padding-left: 0.3em;
+    text-align: start;
+}
+.cell .event-badge span {
+    width: 98%;
+}
+
+.calendar .disabled {
+    background-color: #ccc;
+    pointer-events: none;
+}
+
+.calendar .current {
+    background-color: #a5dae4;
+}
+.calendar .selected {
+    background-color: lightcyan;
+}
+
+.time-input {
+    margin-top: 0.5em;
+}
